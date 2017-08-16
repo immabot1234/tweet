@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>POTUS Tweets</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+  .panel-body a {
+    word-break: break-all;
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+
+
+    <!-- Jumbotron for Title -->
+
+    <div class="jumbotron" style="font-family: cursive; color: white;">
+      <h1 class="text-center"><strong>Tools for Reading POTUS Tweets</strong></h1>
+      <h3 class="text-cnter">*What's this fake news POTUS is tweeting about? Search the New York Times' reaction to presidential tweets!</h3>
+      <h3 class="text-cnter">*Is POTUS using real words?  Search the dictionary to see if it's English- or just a covfefe!</h3>
+    </div>
+    <!-- <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump">Tweets by realDonaldTrump</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+    <div class="row">
+      <div class="col-sm-6" id="tweet-div">
+        <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump">Tweets by realDonaldTrump</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  </div>
+        <div class="col-sm-6">
+          <img src="http://i0.wp.com/theovergrown.com/wp-content/uploads/2017/03/Trump-Tweet.jpg?fit=690%2C518" class=image alt="POTUS tweets" style="width:530px;height:238px;">
+        </div>
+      </div>
+
+    <!-- Row for Searching New York Times -->
+    <div class="row">
+      <div class="col-sm-6">
+        <br>
+        <!-- First panel is for handling the search parameters -->
+        <div class="panel panel-primary" style="background-color: red ; color: white;">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Search the New York Times for Media Reactions</strong></h3>
+          </div>
+          <div class="panel-body">
+
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group" style="background-color: red ; color: white;">
+                <label for="search">Search Term:</label>
+                <input type="text" class="form-control" id="search-term">
+              </div>
+
+              <!-- Here we capture the number of records that the user wants to retrieve  -->
+              <div class="form-group" style="background-color: red ; color: white;">
+                <label for="pwd">Number of Records to Retrieve:</label>
+                <select class="form-control" id="num-records-select">
+                  <option value="1">1</option>
+                  <!-- Setting the option for 5 as default -->
+                  <option value="5" selected>5</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <!-- Here we have our final submit button -->
+              <div>
+                <button type="submit" class="btn btn-default" id="run-search">Search</button>
+                <button type="button" class="btn btn-default" id="clear-all"> Clear Results</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <br>
+        <!-- First panel is for handling the search parameters -->
+        <div class="panel panel-primary" style="background-color: red ; color: white;">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Search English Dictionary</strong></h3>
+          </div>
+          <div class="panel-body">
+
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group" style="background-color: red ; color: white;">
+                <label for="search">Covfefe? Or Real Word?</label>
+                <input type="text" class="form-control" id="covfefe-checker">
+              </div>
+
+              <!-- Here we capture the number of records that the user wants to retrieve  -->
+
+              <button type="submit" class="btn btn-default" id="covfefe-search">Search</button>
+              <button type="button" class="btn btn-default" id="clear-covfefe-results"> Clear Results</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- This row will handle all of the retrieved articles -->
+    <div class="row">
+      <div class="col-sm-6">
+        <br>
+
+        <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+        <div class="panel panel-primary">
+
+          <!-- Panel Heading for the retrieved articles box -->
+          <div class="panel-heading">
+            <h3 class="panel-title" ><strong>   Media Reactions</strong></h3>
+          </div>
+
+          <!-- This main panel will hold each of the resulting articles -->
+          <div class="panel-body" id="well-section" >
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <br>
+
+        <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+        <div class="panel panel-primary">
+
+          <!-- Panel Heading for the retrieved articles box -->
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Definition of term used by POTUS</strong></h3>
+          </div>
+
+          <!-- This main panel will hold each of the resulting articles -->
+          <div class="panel-body" id="definition-well">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+    </div>
+      </div>
+
+</section>
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Code to the JavaScript File -->
+<script src="./assets/javascript/app.js"></script>
+
+</body>
+
+</html>

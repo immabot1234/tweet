@@ -1,0 +1,22 @@
+.jumbotron{
+  /*background-image: url("https://cdn.geekwire.com/wp-content/uploads/2015/04/twitter-620x369.png");*/
+background-color:#4099FF
+
+}
+
+.panel-primary{
+ background-image: url("https://cdn.geekwire.com/wp-content/uploads/2015/04/twitter-620x369.png");
+}
+
+.panel-primary>.panel-heading{
+  background-color: red;
+}
+
+#tweet-div {
+  color: red;
+   font-size: 200%;
+   font-weight: bold;
+   font-style: italic;
+}
+}
+}
